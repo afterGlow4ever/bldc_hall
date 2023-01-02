@@ -12,9 +12,9 @@
 #ifndef __DESIGN_DEFINE_H_
 #define __DESIGN_DEFINE_H_
 
-#define SPEED_CLOSE_LOOP	
+//#define SPEED_CLOSE_LOOP	
 //#define SPEED_POS_PID
-#define SPEED_INC_PID
+//#define SPEED_INC_PID
 //#define LOCATION_CLOSE_LOOP	
 //#define LOCATION_POS_PID
 //#define LOCATION_INC_PID

@@ -7,13 +7,13 @@
 
 //串口1中断服务程序
 //注意,读取USARTx->SR能避免莫名其妙的错误   	
-u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+uint8_t USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
 //接收状态
 //bit15，	接收完成标志
 //bit14，	接收到0x0d
 //bit13~0，	接收到的有效字节数目
-u16 USART_RX_STA=0;       //接收状态标记	
-u8 aRxBuffer[RXBUFFERSIZE];//HAL库使用的串口接收缓冲
+uint16_t USART_RX_STA=0;       //接收状态标记	
+uint8_t aRxBuffer[RXBUFFERSIZE];//HAL库使用的串口接收缓冲
 
 UART_HandleTypeDef UART1_Handle;
 
@@ -80,7 +80,7 @@ void _sys_exit(int x)
 int fputc(int ch, FILE *f)
 { 	
 //	while((USART1->ISR&0X40)==0);//循环发送,直到发送完毕   
-//	USART1->TDR=(u8)ch;      
+//	USART1->TDR=(uint8_t)ch;      
 //	return ch;
 	/* 发送一个字节数据到串口DEBUG_USART */
 	HAL_UART_Transmit(&UART1_Handle, (uint8_t *)&ch, 1, 1000);	

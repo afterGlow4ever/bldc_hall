@@ -14,8 +14,6 @@
 
 #include "bldc_param.h"
 #include "bldc_bsp.h"
-#include "DataScope_DP.h"
-#include "design_define.h"
 
 //===============================================
 // BLDC basic enum and structure

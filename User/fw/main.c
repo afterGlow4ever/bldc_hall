@@ -20,8 +20,9 @@ int Key_Value = 4;
 int main(void)
 {
 	long cnt = 0;
+	HAL_Init();
 	SystemClock_Config();//400MHz
-	HAL_InitTick(0);
+	delay_init();
 	UART1_BSP_Init(115200);
 	LED_BSP_Init();
 	KEY_BSP_Init();
@@ -33,14 +34,14 @@ int main(void)
 	{
 		if(BLDC0.error_status == MOTOR_STALL)
 		{
-			LED0(0);
-			LED1(1);
+			LED0(1);
+			LED1(0);
 			printf("BLDC disables due to stall.\n\r");		
 		}	
 		if(BLDC0.error_status == MOTOR_HALL_ERROR)
 		{
-			LED0(0);
-			LED1(1);
+			LED0(1);
+			LED1(0);
 			printf("BLDC disables due to hall error.\n\r");		
 		}
 		if(Key_Value == 0)
@@ -52,15 +53,15 @@ int main(void)
 				printf("BLDC is starting.\n\r");	
 				printf("BLDC init speed:%f.\n\r", BLDC0.speed.speed_target);					
 				bldc0_system_enable();
-				LED0(1);
-				LED1(0);			
+				LED0(0);
+				LED1(1);			
 			}
 			else
 			{
 				printf("BLDC is braking.\n\r");		
 				bldc0_system_disable();	
-				LED0(1);
-				LED1(1);
+				LED0(0);
+				LED1(0);
 				printf("BLDC disabled.\n\r");			
 			}
 			Key_Value = 4;	

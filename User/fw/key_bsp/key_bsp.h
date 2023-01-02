@@ -3,7 +3,8 @@
 
 //=======================================================================================
 
-#include "sys.h"
+#include "stm32h7xx.h"
+#include "core_delay.h"
 
 #ifndef _KEY_BSP_
 #define _KEY_BSP_

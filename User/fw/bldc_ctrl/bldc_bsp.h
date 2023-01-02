@@ -14,6 +14,9 @@
 
 #include "stm32h7xx_hal.h"
 #include "stm32h7xx.h"
+#include "core_delay.h"
+#include "DataScope_DP.h"
+#include "design_define.h"
 
 //===============================================
 // pwm timer8

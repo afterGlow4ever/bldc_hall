@@ -48,7 +48,7 @@ void KEY_BSP_Init(void)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	CPU_TS_Tmr_Delay_US(50000);
+	delay_ms(100);
 	switch(GPIO_Pin)
 	{
 		case GPIO_PIN_0 :

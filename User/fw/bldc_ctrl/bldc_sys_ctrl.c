@@ -57,7 +57,7 @@ void bldc0_system_enable(void)
 	BLDC0.operation_status = MOTOR_START_STAGE;
 	BLDC0.error_status = MOTOR_NORMAL;
 	bldc0_actutor_enable();
-	HAL_Delay(50);
+	delay_ms(50);
 	bldc0_feedback_enable();
   // commutation at start
 	HAL_TIM_TriggerCallback(&BLDC0.TIM_HALL_InitStructure);
