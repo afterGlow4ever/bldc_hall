@@ -520,14 +520,14 @@
               <FilePath>..\..\User\fw\stm32h7xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>core_delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\fw\delay\core_delay.c</FilePath>
-            </File>
-            <File>
               <FileName>sys.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\fw\sys\sys.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\fw\delay\core_delay.c</FilePath>
             </File>
           </Files>
         </Group>
